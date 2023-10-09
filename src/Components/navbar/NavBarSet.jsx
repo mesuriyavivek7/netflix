@@ -1,5 +1,6 @@
 import React from 'react'
 import "./navbar.scss"
+import { useState } from 'react'
 //import images
 import Logo from "../../Images/logo.png"
 import Person from "../../Images/person.jpg"
@@ -10,8 +11,17 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 
 export default function NavBarSet() {
+
+   const [isScrolled,setIsScrolled]= useState(false);
+
+   window.onscroll = ()=>{
+       setIsScrolled(window.pageYOffset===0 ? false: true);
+
+       return ()=>(window.onscroll=null);
+   };
+
   return (
-    <div className='navbar'>
+    <div className={isScrolled ? "navbar scrolled":"navbar"}>
        <div className='container'>
              <div className='left'>
                   <img src={Logo}></img>
