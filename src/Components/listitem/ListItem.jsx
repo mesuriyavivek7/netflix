@@ -24,11 +24,12 @@ export default function ListItem({index}) {
            {isHovered && (
             <>
             <video src={Trailer} autoPlay={true} loop></video>
+            <div className="itemInfo">
            <div className="icons">
-              <PlayCircleFilledIcon></PlayCircleFilledIcon>
-              <AddIcon></AddIcon>
-              <ThumbUpOffAltIcon></ThumbUpOffAltIcon>
-              <ThumbDownOffAltIcon></ThumbDownOffAltIcon>
+              <PlayCircleFilledIcon className="icon"></PlayCircleFilledIcon>
+              <AddIcon className="icon"></AddIcon>
+              <ThumbUpOffAltIcon className="icon"></ThumbUpOffAltIcon>
+              <ThumbDownOffAltIcon className="icon"></ThumbDownOffAltIcon>
            </div>
            <div className="itemInfoTop">
                <span>1 hour 14 mins</span>
@@ -40,6 +41,7 @@ export default function ListItem({index}) {
               hic rem evenient error possimut.
              </div>
            <div className="genre">Action</div>
+           </div>
            </>
            )}
            
